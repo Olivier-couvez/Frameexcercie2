@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FrameExo2.MainPage">
 
-    <StackLayout BackgroundColor="DarkGray">
+    <StackLayout BackgroundColor="DarkGray" >
         
             <Grid BackgroundColor="LightGray">
                 <Grid.RowDefinitions>
@@ -14,7 +14,8 @@
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Text="Hier" HorizontalTextAlignment="Start" Grid.Column="0" Grid.Row="0" TextColor="black" FontSize="15"/>
+            <Label Text="Hier" HorizontalTextAlignment="Start" Grid.Column="0" Grid.Row="0" TextColor="black" FontSize="15" Margin="0" VerticalOptions="Center"/>
+            <DatePicker x:Name="scroller" Format="dd MM yyyy"  Grid.Column="0" Grid.Row="0" TextColor="Cyan" FontSize="20" Margin="0" HorizontalOptions="End" />
 
 
             <Grid Grid.Row="1">
@@ -24,7 +25,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
-                <Frame BackgroundColor="Gray" Padding="0" CornerRadius="20" Margin="0,0,0,0" Grid.Row="0">
+                <Frame BackgroundColor="Gray" Padding="0" CornerRadius="20" Grid.Row="0">
                         <Grid Margin="0,0,0,0" Grid.Row="1"> 
 
                             <Grid.RowDefinitions>
@@ -40,16 +41,14 @@
                             <Image Source="coureur.png" Grid.Column="0" Grid.Row="0"></Image>
                         <Label Text="Ostricourt - 50 EF" Grid.Column="1" Grid.Row="0" TextColor="black" Margin="0,20,0,0" FontSize="15"/>
                         <Label Text="Temps" Grid.Column="1" Grid.Row="1" TextColor="black" Margin="0,40,0,0" FontSize="15"/>
-                        <Label Text="7,00 km" Grid.Column="0" Grid.Row="1" TextColor="black" Margin="20,30,0,0" FontSize="25"/>
+                        <Label Text="7,00 km" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontSize="25"/>
                         <Label Text="48:58" Grid.Column="1" Grid.Row="2" TextColor="black" Margin="0,0,0,0" FontSize="20"/>
                         <Label Text="Allure" Grid.Column="2" Grid.Row="1" TextColor="black" Margin="0,40,0,0" FontSize="15"/>
                         <Label Text="7:00" Grid.Column="2" Grid.Row="2" TextColor="black" Margin="0,0,0,0" FontSize="20"/>
-                            
+
                         <TimePicker  x:Name="_timePicker" Format="HH:mm" Grid.Column="2" Grid.Row="0" TextColor="Yellow" FontSize="20" Margin="30,10,0,0"/>
-                        <!-- <DatePicker x:Name="scroller" Format="dd MM yyyy"  Grid.Column="2" Grid.Row="1" TextColor="Cyan" FontSize="20" Margin="0"  />-->
                     </Grid>
-                    
-                    
+                                      
                 </Frame>
                 <Grid Grid.Row="1">
                     <Grid.RowDefinitions>
@@ -67,33 +66,33 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Source="freq.jpg" Grid.Column="0" Grid.Row="0"></Image>
-                    <Label Text="Fréq. cardiaque" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="0" TextColor="Maroon" FontSize="15"/>
-                    <Label Text="56 RE.. " HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="0" TextColor="Maroon" FontSize="20"/>
-                    <Label Text="176 H+.. " HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="0" TextColor="Maroon" FontSize="20"/>
+                    <Label Text="Fréq. cardiaque" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="0" TextColor="Maroon" FontSize="15"/>
+                    <Label Text="56 RE.." VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="0" TextColor="Maroon" FontSize="20"/>
+                    <Label Text="176 H+.." VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="0" TextColor="Maroon" FontSize="20"/>
 
                     <Image Source="bodybat.jpg" Grid.Column="0" Grid.Row="1"></Image>
-                    <Label Text="Body Battery" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="1" TextColor="Maroon" FontSize="15"/>
-                    <Label Text="+ 22 / 25" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="1" TextColor="Maroon" FontSize="15"/>
+                    <Label Text="Body Battery" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="1" TextColor="Maroon" FontSize="15"/>
+                    <Label Text="+ 22 / 25" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="1" TextColor="Maroon" FontSize="20"/>
                     <Label Text=" " HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="1" TextColor="Maroon" FontSize="15"/>
 
                     <Image Source="stress.jpg" Grid.Column="0" Grid.Row="2"></Image>
-                    <Label Text="Niveau de Stress" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="2" TextColor="Maroon" FontSize="15"/>
-                    <Label Text="21" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="2" TextColor="Maroon" FontSize="20"/>
+                    <Label Text="Niveau de Stress" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="2" TextColor="Maroon" FontSize="15"/>
+                    <Label Text="21" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="2" TextColor="Maroon" FontSize="20"/>
                     <Label Text="" HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="2" TextColor="Maroon" FontSize="20"/>
 
                     <Image Source="intensive.png" Grid.Column="0" Grid.Row="3"></Image>
-                    <Label Text="Mn intensive" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="3" TextColor="Maroon" FontSize="15"/>
-                    <Label Text="116 Total quotidien" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="3" TextColor="Maroon" FontSize="20"/>
-                    <Label Text="" HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="3" TextColor="Maroon" FontSize="20"/>
+                    <Label Text="Mn intensive" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="3" TextColor="Maroon" FontSize="15"/>
+                    <Label Text="116" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="3" TextColor="Maroon" FontSize="20"/>
+                    <Label Text=" Total quotidien" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="3" TextColor="Maroon" FontSize="15"/>
 
                     <Image Source="pas.jpg" Grid.Column="0" Grid.Row="4"></Image>
-                    <Label Text="Pas" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="4" TextColor="Maroon" FontSize="15"/>
-                    <Label Text="9 673" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="4" TextColor="Maroon" FontSize="20"/>
+                    <Label Text="Pas" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="4" TextColor="Maroon" FontSize="15"/>
+                    <Label Text="9 673" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="4" TextColor="Maroon" FontSize="20"/>
                     <Label Text="" HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="4" TextColor="Maroon" FontSize="20"/>
 
                     <Image Source="calories.png" Grid.Column="0" Grid.Row="5"></Image>
-                    <Label Text="Calories" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="5" TextColor="Maroon" FontSize="15"/>
-                    <Label Text="2839" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="5" TextColor="Maroon" FontSize="20"/>
+                    <Label Text="Calories" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="1" Grid.Row="5" TextColor="Maroon" FontSize="15"/>
+                    <Label Text="2839" VerticalOptions="Center" HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="5" TextColor="Maroon" FontSize="20"/>
                     <Label Text="" HorizontalTextAlignment="Start"  Grid.Column="3" Grid.Row="5" TextColor="Maroon" FontSize="20"/>
                 </Grid>
                 

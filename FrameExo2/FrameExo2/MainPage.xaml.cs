@@ -22,6 +22,7 @@ namespace FrameExo2
         bool OnTimerTick()
         {
             _timePicker.Time = DateTime.Now.TimeOfDay;
+            scroller.Date = DateTime.Now;
             return true;
         }
     }
